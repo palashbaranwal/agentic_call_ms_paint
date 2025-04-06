@@ -1,0 +1,135 @@
+D:\EAG\S4_Assgn> python .\submit.py
+Starting main execution...
+> d:\eag\s4_assgn\submit.py(58)main()
+-> set_trace()
+(Pdb) c
+Establishing connection to MCP server...
+Connection established, creating session...
+Session created, initializing...
+Requesting tool list...
+Successfully retrieved 22 tools
+Creating system prompt...
+Number of tools: 22
+Added description for tool: 1. add(a: integer, b: integer) - Add two numbers
+Added description for tool: 2. add_list(l: array) - Add all numbers in a list
+Added description for tool: 3. subtract(a: integer, b: integer) - Subtract two numbers
+Added description for tool: 4. multiply(a: integer, b: integer) - Multiply two numbers
+Added description for tool: 5. divide(a: integer, b: integer) - Divide two numbers
+Added description for tool: 6. power(a: integer, b: integer) - Power of two numbers
+Added description for tool: 7. sqrt(a: integer) - Square root of a number
+Added description for tool: 8. cbrt(a: integer) - Cube root of a number
+Added description for tool: 9. factorial(a: integer) - factorial of a number
+Added description for tool: 10. log(a: integer) - log of a number
+Added description for tool: 11. remainder(a: integer, b: integer) - remainder of two numbers divison
+Added description for tool: 12. sin(a: integer) - sin of a number
+Added description for tool: 13. cos(a: integer) - cos of a number
+Added description for tool: 14. tan(a: integer) - tan of a number
+Added description for tool: 15. mine(a: integer, b: integer) - special mining tool
+Added description for tool: 16. create_thumbnail(image_path: string) - Create a thumbnail from an image
+Added description for tool: 17. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+Added description for tool: 18. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+Added description for tool: 19. fibonacci_numbers(n: integer) - Return the first n Fibonacci Numbers
+Added description for tool: 20. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draw a rectangle in Paint from (x1,y1) to (x2,y2)
+Added description for tool: 21. add_text_in_paint(text: string) - Add text in Paint
+Added description for tool: 22. open_paint() - Open Microsoft Paint maximized on secondary monitor
+Successfully created tools description
+Created system prompt...
+Starting iteration loop...
+
+--- Iteration 1 ---
+Printing current query:
+
+ Get the ASCII values of all characters in the word "INDIA", then compute the sum of exponentials of those ASCII values. After that, open Microsoft Paint, draw a rectangle with suitable coordinates, and print the final result inside the rectangle.
+Preparing to generate LLM response...
+Starting LLM generation...
+LLM generation completed
+LLM Response: FUNCTION_CALL: strings_to_chars_to_int|INDIA
+DEBUG: Converting parameter string with value INDIA to type string
+DEBUG: Final iteration result: ['73', '78', '68', '73', '65']
+
+--- Iteration 2 ---
+Printing current query:
+
+ Get the ASCII values of all characters in the word "INDIA", then compute the sum of exponentials of those ASCII values. After that, open Microsoft Paint, draw a rectangle with suitable coordinates, and print the final result inside the rectangle.
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65].  What should I do next?
+Preparing to generate LLM response...
+Starting LLM generation...
+LLM generation completed
+LLM Response: FUNCTION_CALL: int_list_to_exponential_sum|[73, 78, 68, 73, 65]
+DEBUG: Converting parameter int_list with value [73, 78, 68, 73, 65] to type array
+DEBUG: Final iteration result: ['7.59982224609308e+33']
+
+--- Iteration 3 ---
+Printing current query:
+
+ Get the ASCII values of all characters in the word "INDIA", then compute the sum of exponentials of those ASCII values. After that, open Microsoft Paint, draw a rectangle with suitable coordinates, and print the final result inside the rectangle.
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33].  What should I do next?
+Preparing to generate LLM response...
+Starting LLM generation...
+LLM generation completed
+LLM Response: FUNCTION_CALL: open_paint
+DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+
+--- Iteration 4 ---
+Printing current query:
+
+ Get the ASCII values of all characters in the word "INDIA", then compute the sum of exponentials of those ASCII values. After that, open Microsoft Paint, draw a rectangle with suitable coordinates, and print the final result inside the rectangle.
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}].  What should I do next?
+Preparing to generate LLM response...
+Starting LLM generation...
+LLM generation completed
+LLM Response: FUNCTION_CALL: draw_rectangle|0|380|540|700
+Rectangle parameters: ['0', '380', '540', '700']
+DEBUG: Converting parameter x1 with value 0 to type integer
+DEBUG: Converting parameter y1 with value 380 to type integer
+DEBUG: Converting parameter x2 with value 540 to type integer
+DEBUG: Converting parameter y2 with value 700 to type integer
+DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Rectangle drawn from (0,380) to (540,700)", "annotations": null}]}']
+
+--- Iteration 5 ---
+Printing current query:
+
+ Get the ASCII values of all characters in the word "INDIA", then compute the sum of exponentials of those ASCII values. After that, open Microsoft Paint, draw a rectangle with suitable coordinates, and print the final result inside the rectangle.
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}]. In the 4 iteration you called draw_rectangle with {'x1': 0, 'y1': 380, 'x2': 540, 'y2': 700} parameters, and the function returned [{"content": [{"type": "text", "text": "Rectangle drawn from (0,380) to (540,700)", "annotations": null}]}].  What should I do next?
+Preparing to generate LLM response...
+Starting LLM generation...
+LLM generation completed
+LLM Response: FUNCTION_CALL: add_text_in_paint|7.59982224609308e+33
+DEBUG: Converting parameter text with value 7.59982224609308e+33 to type string
+DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Text:\'7.59982224609308e+33\' added successfully", "annotations": null}]}']
+
+--- Iteration 6 ---
+Printing current query:
+
+ Get the ASCII values of all characters in the word "INDIA", then compute the sum of exponentials of those ASCII values. After that, open Microsoft Paint, draw a rectangle with suitable coordinates, and print the final result inside the rectangle.
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33].  What should I do next?
+7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened su7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}]. In the 4 iteration you called draw_rectangle with {'x1': 0, 'y1': 380, 'x2': 540, 'y2': 700} parameters, and the function returned [{"content": [{"type": "text", "text": "Rectangle drawn from (0,380) to (540,700)", "annotations": null}]}].  What should I do next?
+
+7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}]. In the 4 iteration you called draw_rectangle with {'x1': 0, 'y1': 380, 'x2': 540, 'y2': 700} parameters, and the function returned [{"content": [{"type": "text", "text": "Rectangle drawn from (0,380) to (540,700)", "annotations": null}]}].  What should I do7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}]. In the 4 iteration you called draw_rectangle with {'x1': 0, 'y1': 380, 'x2': 540, 'y2': 700} parameters, and the function returned [{"content": [{"type": "text", "text": "Rectangle drawn from (0,380) to (540,700)", "annotations": null}]}].  What should I do next?
+
+In the 1 iteration you called strings_to_chars_to_int with {'string': 'INDIA'} parameters, and the function returned [73, 78, 68, 73, 65]. In the 2 iteration you called int_list_to_exponential_sum with {'int_list': [73, 78, 68, 73, 65]} parameters, and the function returned [7.59982224609308e+33]. In the 3 iteration you called open_paint with {} parameters, and the function returned [{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}]. In the 4 iteration you called draw_rectangle with {'x1': 0, 'y1': 380, 'x2': 540, 'y2': 700} parameters, and the function returned [{"content": [{"type": "text", "text": "Rectangle drawn from (0,380) to (540,700)", "annotations": null}]}]. In the 5 iteration you called add_text_in_paint with {'text': '7.59982224609308e+33'} parameters, and the function returned [{"content": [{"type": "text", "text": "Text:'7.59982224609308e+33' added successfully", "annotations": null}]}].  What should I do next?
+Preparing to generate LLM response...
+Starting LLM generation...
+LLM generation completed
+LLM Response: ALL_DONE: [Text printed inside the rectangle]
+
+=== Agent Execution Complete ===
