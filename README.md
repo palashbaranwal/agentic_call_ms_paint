@@ -2,6 +2,8 @@
 
 An innovative project that demonstrates AI-powered automation of Microsoft Paint using Google's Gemini AI model. This project showcases the integration of natural language processing with desktop application automation.
 
+Demo - https://www.youtube.com/watch?v=gIQtjWXhp3Q
+
 ## 🌟 Features
 
 - AI-powered interpretation of user commands using Gemini 2.0
